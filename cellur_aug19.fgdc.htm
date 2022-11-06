@@ -1,0 +1,1269 @@
+<HTML>
+<HEAD>
+<SCRIPT><!--
+
+      function fix(e) {
+        var par = e.parentNode;
+        e.id = "";
+        e.style.marginLeft = "0.42in";
+        var pos = e.innerText.indexOf("\n");
+        if (pos > 0) {
+          while (pos > 0) {
+            var t = e.childNodes(0);
+            var n = document.createElement("PRE");
+            var s = t.splitText(pos);
+            e.insertAdjacentElement("afterEnd", n);
+            n.appendChild(s);
+            n.style.marginLeft = "0.42in";
+            e = n;
+            pos = e.innerText.indexOf("\n");
+          }
+          var count = (par.children.length);
+          for (var i = 0; i < count; i++) {
+            e = par.children(i);
+            if (e.tagName == "PRE") {
+              pos = e.innerText.indexOf(">");
+              if (pos != 0) {
+                n = document.createElement("DD");
+                e.insertAdjacentElement("afterEnd", n);
+                n.innerText = e.innerText;
+                e.removeNode(true);
+              }
+            }
+          }
+          if (par.children.tags("PRE").length > 0) {
+            count = (par.children.length);
+            for (i = 0; i < count; i++) {
+              e = par.children(i);
+              if (e.tagName == "PRE") {
+                e.id = "";
+                if (i < (count-1)) {
+                  var e2 = par.children(i + 1);
+                  if (e2.tagName == "PRE") {
+                    e.insertAdjacentText("beforeEnd", e2.innerText+"\n");
+                    e2.removeNode(true);
+                    count = count-1;
+                    i = i-1;
+                  }
+                }
+              }
+            }
+          }
+        }
+        else {
+          n = document.createElement("DD");
+          par.appendChild(n);
+          n.innerText = e.innerText;
+          e.removeNode(true);
+        }
+      }
+
+    --></SCRIPT>
+</HEAD>
+<BODY oncontextmenu="return true">
+<A name="Top" />
+<H1>REGISTERED CELLULAR ANTENNA STRUCTURE LOCATIONS IN FLORIDA - AUGUST 2019</H1>
+<H2>Metadata:</H2>
+<UL>
+<LI><A HREF="#Identification_Information">Identification_Information</A></LI>
+<LI><A HREF="#Data_Quality_Information">Data_Quality_Information</A></LI>
+<LI><A HREF="#Spatial_Data_Organization_Information">Spatial_Data_Organization_Information</A></LI>
+<LI><A HREF="#Spatial_Reference_Information">Spatial_Reference_Information</A></LI>
+<LI><A HREF="#Entity_and_Attribute_Information">Entity_and_Attribute_Information</A></LI>
+<LI>
+<A HREF="#1">
+
+                  Distribution_Information
+                </A>
+</LI>
+<LI><A HREF="#Metadata_Reference_Information">Metadata_Reference_Information</A></LI>
+</UL>
+<A name="Identification_Information"><HR /></A>
+<DL>
+<DT><I>Identification_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Citation:</I></DT>
+<DD>
+<DL>
+<DT><I>Citation_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Originator:</I>
+Federal Communications Commission</DT>
+<DT><I>Publication_Date:</I>
+20190805</DT>
+<DT><I>Title:</I></DT>
+<DD>REGISTERED CELLULAR ANTENNA STRUCTURE LOCATIONS IN FLORIDA - AUGUST 2019</DD>
+<DT><I>Geospatial_Data_Presentation_Form:</I>
+vector digital data</DT>
+<DT><I>Publication_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Publication_Place:</I>
+Washington, DC</DT>
+<DT><I>Publisher:</I>
+Federal Communications Commission</DT>
+</DL>
+</DD>
+<DT><I>Other_Citation_Details:</I></DT>
+<DD>State of Florida</DD>
+<DT><I>Online_Linkage:</I>
+<A TARGET="viewer" HREF="http://wireless.fcc.gov/antenna/index.htm?job=uls_transaction&amp;page=weekly">
+http://wireless.fcc.gov/antenna/index.htm?job=uls_transaction&amp;page=weekly</A>
+</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Description:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Abstract:</I></DT>
+<PRE ID="original">This dataset contains FCC registered cellular antenna structure locations in the 
+state of Florida. This is an update to the cellur_aug18 layer.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Purpose:</I></DT>
+<PRE ID="original">Serve as base information for use in GIS systems for general planning, 
+analytical, and research purposes. It is not intended for engineering work 
+or to legally define reservation boundaries, FCC licensee data or FCC market 
+boundaries.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Supplemental_Information:</I></DT>
+<PRE ID="original">As you use the cellular structure location data, be aware that 
+the database may reflect uncorrected facility reporting errors.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Time_Period_of_Content:</I></DT>
+<DD>
+<DL>
+<DT><I>Time_Period_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Single_Date/Time:</I></DT>
+<DD>
+<DL>
+<DT><I>Calendar_Date:</I>
+20190805</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DIV>
+<DT><I>Currentness_Reference:</I></DT>
+<PRE ID="original">publication date</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Status:</I></DT>
+<DD>
+<DL>
+<DT><I>Progress:</I>
+Complete</DT>
+<DT><I>Maintenance_and_Update_Frequency:</I>
+As needed</DT>
+</DL>
+</DD>
+<DT><I>Spatial_Domain:</I></DT>
+<DD>
+<DL>
+<DT><I>Bounding_Coordinates:</I></DT>
+<DD>
+<DL>
+<DT><I>West_Bounding_Coordinate:</I>
+-87.517916</DT>
+<DT><I>East_Bounding_Coordinate:</I>
+-79.894265</DT>
+<DT><I>North_Bounding_Coordinate:</I>
+30.990757</DT>
+<DT><I>South_Bounding_Coordinate:</I>
+24.510170</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Keywords:</I></DT>
+<DD>
+<DL>
+<DT><I>Theme:</I></DT>
+<DD>
+<DL>
+<DT><I>Theme_Keyword_Thesaurus:</I>
+NONE</DT>
+<DT><I>Theme_Keyword:</I>
+utilitiesCommunication</DT>
+</DL>
+</DD>
+<DT><I>Theme:</I></DT>
+<DD>
+<DL>
+<DT><I>Theme_Keyword_Thesaurus:</I>
+NONE</DT>
+<DT><I>Theme_Keyword:</I>
+utilitiesCommunication</DT>
+<DT><I>Theme_Keyword:</I>
+structure</DT>
+</DL>
+</DD>
+<DT><I>Theme:</I></DT>
+<DD>
+<DL>
+<DT><I>Theme_Keyword_Thesaurus:</I>
+ISO 19115 Topic Category</DT>
+<DT><I>Theme_Keyword:</I>
+utilitiesCommunication</DT>
+</DL>
+</DD>
+<DT><I>Place:</I></DT>
+<DD>
+<DL>
+<DT><I>Place_Keyword:</I>
+Florida</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Access_Constraints:</I>
+NONE</DT>
+<DIV>
+<DT><I>Use_Constraints:</I></DT>
+<PRE ID="original">Any use of trade, product, or firm names is for descriptive purposes only 
+and does not imply endorsement by the U.S. Government or the Federal 
+Communications Commission (FCC). No warranty expressed or implied is 
+made by the FCC as to the accuracy of the data and related materials. 
+The act of distribution shall not constitute any such warranty, and no 
+responsibility is assumed by the FCC in the use of this data, or related 
+materials.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Point_of_Contact:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization_Primary:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization:</I>
+Federal Communications Commission</DT>
+</DL>
+</DD>
+<DT><I>Contact_Address:</I></DT>
+<DD>
+<DL>
+<DT><I>Address_Type:</I>
+mailing and physical address</DT>
+<DIV>
+<DT><I>Address:</I></DT>
+<PRE ID="original">445 12th St. SW</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>City:</I>
+Washington</DT>
+<DT><I>State_or_Province:</I>
+D.C.</DT>
+<DT><I>Postal_Code:</I>
+20554</DT>
+<DT><I>Country:</I>
+USA</DT>
+</DL>
+</DD>
+<DT><I>Contact_Voice_Telephone:</I>
+888-225-5322</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+fccinfo@fcc.gov</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DIV>
+<DT><I>Data_Set_Credit:</I></DT>
+<PRE ID="original">FCC Wireless Telecommunications Bureau.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Native_Data_Set_Environment:</I></DT>
+<DD>Microsoft Windows Vista Version 6.1 (Build 7601) Service Pack 1; ESRI ArcCatalog 9.3.1.4000</DD>
+<DT><I>Cross_Reference:</I></DT>
+<DD>
+<DL>
+<DT><I>Citation_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Other_Citation_Details:</I></DT>
+<DD>Federal Communications Commission: 
+http://www.fcc.gov/
+
+Wireless Telecommunications Bureau:
+http://wireless.fcc.gov/index.htm</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Data_Quality_Information"><HR /></A>
+<DL>
+<DT><I>Data_Quality_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Accuracy:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Attribute_Accuracy_Report:</I></DT>
+<PRE ID="original">GeoPlan relied on the integrity of the attribute information within
+the original data.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DIV>
+<DT><I>Logical_Consistency_Report:</I></DT>
+<PRE ID="original">This data is provided 'as is'. GeoPlan relied on the integrity
+of the original data layer's topology</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Completeness_Report:</I></DT>
+<PRE ID="original">This data is provided 'as is' by GeoPlan and is complete to our
+knowledge.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Positional_Accuracy:</I></DT>
+<DD>
+<DL>
+<DT><I>Horizontal_Positional_Accuracy:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Horizontal_Positional_Accuracy_Report:</I></DT>
+<PRE ID="original">This data is provided 'as is' and its horizontal positional accuracy
+has not been verified by GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Vertical_Positional_Accuracy:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Vertical_Positional_Accuracy_Report:</I></DT>
+<PRE ID="original">This data is provided 'as is' and its vertical positional accuracy
+has not been verified by GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Lineage:</I></DT>
+<DD>
+<DL>
+<DT><I>Source_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Source_Scale_Denominator:</I>
+Unknown</DT>
+<DT><I>Type_of_Source_Media:</I>
+online</DT>
+<DT><I>Source_Citation_Abbreviation:</I></DT>
+<DD>FCC</DD>
+<DIV>
+<DT><I>Source_Contribution:</I></DT>
+<PRE ID="original">Spatial and Attribute Information</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Process_Step:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Process_Description:</I></DT>
+<PRE ID="original">In 2012 the FCC stopped releasing tower and antenna locations as spatial 
+data. Data layers are available as databases with associated .dat files. 
+
+GeoPlan downloaded the Cellular 47 CFR Part 22 from 
+http://wireless.fcc.gov/antenna/index.htm?job=uls_transaction&amp;page=weekly in 
+August 2019. During the QA/QC process GeoPlan performed the following steps:
+
+- Opened and formatted the LO.dat file in Excel. File was saved as a CVS and then 
+  exported to .dbf in ArcMap.  Added field names using previous fgdl versions of cellur.
+  Saved coordinate fields as LATD, LATM, LATS, LAT_DIR, LOND, LONM, 
+  LONS, and LON_DIR
+- Filtered .dbf to contain only records located in Florida. (Using field Location State
+  Code from LO.dat
+- Added LAT and LONG fields using type = double
+- Used field calculator to convert coordinate fields from DMS to DD. The 
+  equation for latitude was:
+	( [LATS] /3600) + ( [LATM] /60) + [LATD]
+  The equation for longitude was:
+	( [LONS] /3600) + ( [LONM] /60) + [LOND]
+- Generated XY data using the LATDD and LONDD fields.  The projection
+  was defined as WGS 1984.
+- Exported XY events to shapefile.
+- Fields  LATD, LATM, LATS, LAT_DIR, LOND, LONM, LONS, and LON_DIR
+  were deleted.
+- Removed one feature that was incorrectly attributed to Florida. LIC_ID = 12969, 
+  LICENSEE = USCOC OF GREATER OKLAHOMA, LLC
+- Projected the new shapefile to NAD83 HARN using the
+  WGS_1984_(ITRF00)_To_NAD_1983 + NAD_1983_To_HARN_Florida transformation
+
+- Opened and formatted EN.dat file in Excel and exported to .dbf in ArcMap. Added field
+  names using previous fgdl versions of cellur. Fields not present in previous versions were 
+  removed.
+- EN.dbf file brought into ArcMap and joined with the LO file info using LIC_ID field. 
+- Edited the feature class attribute table to match previous versions
+- Added field MGRS by using the Convert Coordinate Notation tool and choosing
+  output coordinate format as MGRS.
+- Added field GOOGLEMAP by concatenating:
+  https://www.google.com/maps/place/ and the MGRS ID
+- Added descript field based on CALLSIGN.
+- Added FGDLAQDATE based on the date GeoPlan acquired the data
+- Restructured table and uppercased all fields
+
+Field Changes
+
+- Previous fields LAT_DMS and LON_DMS have been renamed to LAT and LON.
+- Removed fields LATDIR and LONDIR
+
+Notes:
+When the FCC generated this data set spatially in the past they only included 
+lat/lon in DMS. Previously the seconds included no decimal places and now 
+they do include 1 decimal place. Now that we are generating the spatial locations 
+from this data the improved accuracy has resulted is a visible shift that varies 
+anywhere from 1-36 meters.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Source_Used_Citation_Abbreviation:</I></DT>
+<DD>GeoPlan</DD>
+<DT><I>Process_Date:</I>
+20190807</DT>
+</DL>
+</DD>
+<DT><I>Process_Step:</I></DT>
+<DD>
+<DL>
+<DIV>
+<DT><I>Process_Description:</I></DT>
+<PRE ID="original">Dataset copied.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Source_Used_Citation_Abbreviation:</I></DT>
+<DD>Server=wopr.fla-etat.org; Service=5151; User=etat; Version=SDE.DEFAULT</DD>
+<DT><I>Process_Date:</I>
+20190928</DT>
+<DT><I>Process_Time:</I>
+13305000</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Spatial_Data_Organization_Information"><HR /></A>
+<DL>
+<DT><I>Spatial_Data_Organization_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Direct_Spatial_Reference_Method:</I>
+Vector</DT>
+<DT><I>Point_and_Vector_Object_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>SDTS_Terms_Description:</I></DT>
+<DD>
+<DL>
+<DT><I>SDTS_Point_and_Vector_Object_Type:</I>
+Entity point</DT>
+<DT><I>Point_and_Vector_Object_Count:</I>
+972</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Spatial_Reference_Information"><HR /></A>
+<DL>
+<DT><I>Spatial_Reference_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Horizontal_Coordinate_System_Definition:</I></DT>
+<DD>
+<DL>
+<DT><I>Planar:</I></DT>
+<DD>
+<DL>
+<DT><I>Map_Projection:</I></DT>
+<DD>
+<DL>
+<DT><I>Map_Projection_Name:</I>
+Albers Conical Equal Area</DT>
+<DT><I>Albers_Conical_Equal_Area:</I></DT>
+<DD>
+<DL>
+<DT><I>Standard_Parallel:</I>
+24.000000</DT>
+<DT><I>Standard_Parallel:</I>
+31.500000</DT>
+<DT><I>Longitude_of_Central_Meridian:</I>
+-84.000000</DT>
+<DT><I>Latitude_of_Projection_Origin:</I>
+24.000000</DT>
+<DT><I>False_Easting:</I>
+400000.000000</DT>
+<DT><I>False_Northing:</I>
+0.000000</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Planar_Coordinate_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Planar_Coordinate_Encoding_Method:</I>
+coordinate pair</DT>
+<DT><I>Coordinate_Representation:</I></DT>
+<DD>
+<DL>
+<DT><I>Abscissa_Resolution:</I>
+0.000156</DT>
+<DT><I>Ordinate_Resolution:</I>
+0.000156</DT>
+</DL>
+</DD>
+<DT><I>Planar_Distance_Units:</I>
+meters</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Geodetic_Model:</I></DT>
+<DD>
+<DL>
+<DT><I>Horizontal_Datum_Name:</I>
+D_North_American_1983_HARN</DT>
+<DT><I>Ellipsoid_Name:</I>
+Geodetic Reference System 80</DT>
+<DT><I>Semi-major_Axis:</I>
+6378137.000000</DT>
+<DT><I>Denominator_of_Flattening_Ratio:</I>
+298.257222</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Vertical_Coordinate_System_Definition:</I></DT>
+<DD>
+<DL>
+<DT><I>Altitude_System_Definition:</I></DT>
+<DD>
+<DL>
+<DT><I>Altitude_Resolution:</I>
+1.000000</DT>
+<DT><I>Altitude_Encoding_Method:</I>
+Explicit elevation coordinate included with horizontal coordinates</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Entity_and_Attribute_Information"><HR /></A>
+<DL>
+<DT><I>Entity_and_Attribute_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Detailed_Description:</I></DT>
+<DD>
+<DL>
+<DT><I>Entity_Type:</I></DT>
+<DD>
+<DL>
+<DT><I>Entity_Type_Label:</I>
+CELLUR_AUG19</DT>
+<DT><I>Entity_Type_Definition:</I></DT>
+<DD>CELLUR_AUG19.DBF</DD>
+<DT><I>Entity_Type_Definition_Source:</I></DT>
+<DD>FCC</DD>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+OBJECTID</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Internal feature number.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">ESRI</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Attribute_Domain_Values:</I></DT>
+<DD>
+<DL>
+<DT><I>Unrepresentable_Domain:</I></DT>
+<DD>Sequential unique whole numbers that are automatically generated.</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+Shape</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Feature geometry.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">Esri</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Attribute_Domain_Values:</I></DT>
+<DD>
+<DL>
+<DT><I>Unrepresentable_Domain:</I></DT>
+<DD>Coordinates defining the features.</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LICENSEE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Represents the legal entity that is issued a license and may not represent the name for which service is marketed/provided.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+CALLSIGN</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">A combination of letters and numbers that identify an FCC license.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LOCNUM</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">The number associated to the location by the Universal Licensing System (ULS). This number must be used to reference the location on all applications submitted via ULS.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LAT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">The exact geographic location latitude of the structure in degrees (e.g., 42), minutes (e.g., 13'), and seconds (e.g., 10").</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LON</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">The exact geographic location longitude of the structure in degrees (e.g., 42), minutes (e.g., 13'), and seconds (e.g., 10").</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LOCADD</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Physical address of the cellular structure.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LOCCITY</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">City in which the cellular structure is located.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LOCCOUNTY</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">County in which the cellular structure is located</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LOCSTATE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">State in which the cellular structure is located.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+NEPA</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Compliance with the National Environmental Policy Act</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Attribute_Domain_Values:</I></DT>
+<DD>
+<DL>
+<DT><I>Enumerated_Domain:</I></DT>
+<DD>
+<DL>
+<DT><I>Enumerated_Domain_Value:</I>
+N</DT>
+<DIV>
+<DT><I>Enumerated_Domain_Value_Definition:</I></DT>
+<PRE ID="original">No</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Attribute_Domain_Values:</I></DT>
+<DD>
+<DL>
+<DT><I>Enumerated_Domain:</I></DT>
+<DD>
+<DL>
+<DT><I>Enumerated_Domain_Value:</I>
+Y</DT>
+<DIV>
+<DT><I>Enumerated_Domain_Value_Definition:</I></DT>
+<PRE ID="original">Yes</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+TOWREG</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Tower registration number.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+SUPSTRUC</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">The height above ground level to the highest point of the supporting structure only in meters.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+ALLSTRUC</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">The overall height above ground level of the entire antenna structure to the highest point, including any appurtenances, in meters. (Includes antennas, dishes, obstruction lighting, etc.)</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+STRUCTYPE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">The code for the type of structure on which the antenna is or will be mounted.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LIC_ID</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">A masked Taxpayer Identification Number (TIN). In the Universal Licensing System (ULS) an entity's TIN is not provided to the public. However, the public will see a Licensee ID number (masked TIN) that they can use for application and license searches</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">FCC</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LATDD</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Latitude in Decimal Degrees.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+LONDD</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Longitude in Decimal Degrees.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+MGRS</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Military Grid Reference System (MGRS) Coordinate of the Facility. The MGRS is the geocoordinate standard used by NATO militaries for locating points on the earth. The MGRS provides a means to represent any location on the surface of the Earth using an alphanumeric string. Hierarchical references are based on the Universal Transverse Mercator (UTM) coordinate system. The MGRS is used for the entire earth. http://mgrs-data.org/</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+GOOGLEMAP</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Webpage hyperlink to location in Google Maps.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+DESCRIPT</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">GeoPlan added field based on CALLSIGN</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+FGDLAQDATE</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">The date GeoPlan aquired the data from the source.</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+<DT><I>Attribute:</I></DT>
+<DD>
+<DL>
+<DT><I>Attribute_Label:</I>
+AUTOID</DT>
+<DIV>
+<DT><I>Attribute_Definition:</I></DT>
+<PRE ID="original">Unique ID added by GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DIV>
+<DT><I>Attribute_Definition_Source:</I></DT>
+<PRE ID="original">GeoPlan</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A NAME="1">
+<HR />
+</A>
+<DL>
+<DT><I>Distribution_Information:</I>
+</DT>
+<DD>
+<DL>
+<DT><I>Distributor:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization_Primary:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization:</I>
+Florida Geographic Data Library (FGDL)</DT>
+</DL>
+</DD>
+<DT><I>Contact_Address:</I></DT>
+<DD>
+<DL>
+<DT><I>Address_Type:</I>
+mailing address</DT>
+<DIV>
+<DT><I>Address:</I></DT>
+<PRE ID="original">431 Architecture PO Box 115706</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>City:</I>
+Gainesville</DT>
+<DT><I>State_or_Province:</I>
+Florida</DT>
+<DT><I>Postal_Code:</I>
+32611-5706</DT>
+<DT><I>Country:</I>
+United States</DT>
+</DL>
+</DD>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+Web site: http://www.fgdl.org</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+Technical Support: http://www.fgdl.org/fgdlfeed.html</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+For FGDL Software: http://www.fgdl.org/software.html</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+FGDL Frequently Asked Questions: http://www.fgdl.org/fgdlfaq.html</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+Mailing list for FGDL: http://www.fgdl.org/fgdl-l.html</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Resource_Description:</I>
+DOWNLOADABLE DATA</DT>
+<DIV>
+<DT><I>Distribution_Liability:</I></DT>
+<PRE ID="original">The Florida Geographic Data Library is a collection of Geospatial Data
+compiled by the University of Florida GeoPlan Center with support from
+the Florida Department of Transportation. GIS data available in FGDL is
+collected from various state, federal, and other agencies (data sources)
+who are data stewards, producers, or publishers. The data available in
+FGDL may not be the most current version of the data offered by the
+data source. University of Florida GeoPlan Center makes no guarantees
+about the currentness of the data and suggests that data users check
+with the data source to see if more recent versions of the data exist.
+
+Furthermore, the GIS data available in the FGDL are provided 'as is'.
+The University of Florida GeoPlan Center makes no warranties, guaranties
+or representations as to the truth, accuracy or completeness of the data
+provided by the data sources. The University of Florida GeoPlan Center
+makes no representations or warranties about the quality or suitability
+of the materials, either expressly or implied, including but not limited
+to any implied warranties of merchantability, fitness for a particular
+purpose, or non-infringement. The University of Florida GeoPlan Center
+shall not be liable for any damages suffered as a result of using,
+modifying, contributing or distributing the materials.
+
+A note about data scale: 
+
+Scale is an important factor in data usage.  Certain scale datasets
+are not suitable for some project, analysis, or modeling purposes.
+Please be sure you are using the best available data. 
+
+1:24000 scale datasets are recommended for projects that are at the
+county level.
+1:24000 data should NOT be used for high accuracy base mapping such
+as property parcel boundaries.
+1:100000 scale datasets are recommended for projects that are at the
+multi-county or regional level.
+1:125000 scale datasets are recommended for projects that are at the
+regional or state level or larger.
+
+Vector datasets with no defined scale or accuracy should be
+considered suspect. Make sure you are familiar with your data
+before using it for projects or analysis. Every effort has been
+made to supply the user with data documentation. For additional
+information, see the References section and the Data Source Contact
+section of this documentation. For more information regarding
+scale and accuracy, see our webpage at:
+http://geoplan.ufl.edu/education.html</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>Standard_Order_Process:</I></DT>
+<DD>
+<DL>
+<DT><I>Digital_Form:</I></DT>
+<DD>
+<DL>
+<DT><I>Digital_Transfer_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Transfer_Size:</I>
+0.026</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Technical_Prerequisites:</I></DT>
+<DD>This data is intended for use with a Geographic Information Systems or Remote Sensing software package.</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+<A name="Metadata_Reference_Information"><HR /></A>
+<DL>
+<DT><I>Metadata_Reference_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Metadata_Date:</I>
+20190928</DT>
+<DT><I>Metadata_Contact:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Information:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization_Primary:</I></DT>
+<DD>
+<DL>
+<DT><I>Contact_Organization:</I>
+Federal Communications Commission</DT>
+</DL>
+</DD>
+<DT><I>Contact_Address:</I></DT>
+<DD>
+<DL>
+<DT><I>Address_Type:</I>
+mailing and physical address</DT>
+<DIV>
+<DT><I>Address:</I></DT>
+<PRE ID="original">445 12th St. SW</PRE>
+<SCRIPT>fix(original)</SCRIPT>
+</DIV>
+<DT><I>City:</I>
+Washington</DT>
+<DT><I>State_or_Province:</I>
+D.C.</DT>
+<DT><I>Postal_Code:</I>
+20554</DT>
+<DT><I>Country:</I>
+USA</DT>
+</DL>
+</DD>
+<DT><I>Contact_Voice_Telephone:</I>
+888-225-5322</DT>
+<DT><I>Contact_Electronic_Mail_Address:</I>
+fccinfo@fcc.gov</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+<DT><I>Metadata_Standard_Name:</I>
+FGDC Content Standards for Digital Geospatial Metadata</DT>
+<DT><I>Metadata_Standard_Version:</I>
+FGDC-STD-001-1998</DT>
+<DT><I>Metadata_Time_Convention:</I>
+local time</DT>
+<DT><I>Metadata_Extensions:</I></DT>
+<DD>
+<DL>
+<DT><I>Online_Linkage:</I>
+<A TARGET="viewer" HREF="http://www.esri.com/metadata/esriprof80.html">
+http://www.esri.com/metadata/esriprof80.html</A>
+</DT>
+<DT><I>Profile_Name:</I>
+ESRI Metadata Profile</DT>
+</DL>
+</DD>
+</DL>
+</DD>
+</DL>
+<A HREF="#Top">Back to Top</A>
+</BODY>
+</HTML>
